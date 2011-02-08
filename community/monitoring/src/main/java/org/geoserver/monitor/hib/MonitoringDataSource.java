@@ -1,3 +1,7 @@
+/* Copyright (c) 2001 - 2011 TOPP - www.openplans.org. All rights reserved.
+ * This code is licensed under the GPL 2.0 license, availible at the root
+ * application directory.
+ */
 package org.geoserver.monitor.hib;
 
 import java.io.File;
@@ -61,6 +65,8 @@ public class MonitoringDataSource extends BasicDataSource {
             if (db.containsKey("password")) {
                 setPassword(db.getProperty("password"));
             }
+            
+            setDefaultAutoCommit(Boolean.valueOf(db.getProperty("defaultAutoCommit", "true")));
             
             //TODO: make other parameters configurable
             setMinIdle(1);

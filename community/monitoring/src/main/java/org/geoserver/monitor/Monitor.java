@@ -1,3 +1,7 @@
+/* Copyright (c) 2001 - 2011 TOPP - www.openplans.org. All rights reserved.
+ * This code is licensed under the GPL 2.0 license, availible at the root
+ * application directory.
+ */
 package org.geoserver.monitor;
 
 import java.util.List;
@@ -81,7 +85,7 @@ public class Monitor {
         return dao;
     }
     
-    public void query(MonitorQuery q, RequestDataVisitor visitor) {
+    public void query(Query q, RequestDataVisitor visitor) {
         dao.getRequests(q, visitor);
     }
 
