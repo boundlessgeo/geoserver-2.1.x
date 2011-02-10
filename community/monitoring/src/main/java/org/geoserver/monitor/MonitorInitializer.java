@@ -16,6 +16,8 @@ public class MonitorInitializer implements GeoServerInitializer {
     }
     
     public void initialize(GeoServer geoServer) throws Exception {
+        if (!monitor.isEnabled()) return;
+        
         //clear out any requests that were left in an inconsistent state
         Query query = new Query().filter("status",
             Arrays.asList(Status.RUNNING, Status.WAITING, Status.CANCELLING), Comparison.IN);
