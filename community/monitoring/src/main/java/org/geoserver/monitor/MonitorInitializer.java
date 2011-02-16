@@ -9,6 +9,8 @@ import org.geoserver.monitor.Query.Comparison;
 import org.geoserver.monitor.RequestData.Status;
 import org.geoserver.monitor.hib.HibernateMonitorDAO2;
 import org.hibernate.SessionFactory;
+import org.geoserver.monitor.Query.Comparison;
+import org.geoserver.monitor.RequestData.Status;
 
 public class MonitorInitializer implements GeoServerInitializer {
 
